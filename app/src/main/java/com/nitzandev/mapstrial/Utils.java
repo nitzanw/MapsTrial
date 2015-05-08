@@ -3,6 +3,7 @@ package com.nitzandev.mapstrial;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.LinearLayout;
@@ -41,7 +42,7 @@ public class Utils {
         LinearLayout ll = (LinearLayout) errView.findViewById(android.R.id.inputArea);
         for (Integer i : resList) {
             TextView v = new TextView(context);
-            v.setPadding(5,0,5,10);
+            v.setGravity(Gravity.CENTER);
             v.setText(i);
             ll.addView(v);
         }

@@ -120,7 +120,7 @@ public class TrackService
             currSpeed = location.getSpeed();
         }
         if (mCurrLocation != null) {
-            //save the distance in km
+            //save the distance in km in the sharedPrefs to avoid service dieing and deleting the data
             mDistance += mCurrLocation.distanceTo(location) / (float)1000;
             SharedPreferences prefs= getSharedPreferences(MainActivity.MAPS_TRIAL_PREFS_FILE,MODE_PRIVATE);
             SharedPreferences.Editor editor = prefs.edit();
